@@ -1,0 +1,34 @@
+package main
+
+import (
+	"github.com/artifact-registry-api/mcp-server/config"
+	"github.com/artifact-registry-api/mcp-server/models"
+	tools_projects "github.com/artifact-registry-api/mcp-server/tools/projects"
+)
+
+func GetAll(cfg *config.APIConfig) []models.Tool {
+	return []models.Tool{
+		tools_projects.CreateArtifactregistry_projects_locations_repositories_packages_tags_listTool(cfg),
+		tools_projects.CreateArtifactregistry_projects_locations_repositories_packages_tags_createTool(cfg),
+		tools_projects.CreateArtifactregistry_projects_locations_repositories_packages_versions_deleteTool(cfg),
+		tools_projects.CreateArtifactregistry_projects_locations_repositories_pythonpackages_getTool(cfg),
+		tools_projects.CreateArtifactregistry_projects_locations_repositories_packages_tags_patchTool(cfg),
+		tools_projects.CreateArtifactregistry_projects_locations_repositories_packages_listTool(cfg),
+		tools_projects.CreateArtifactregistry_projects_locations_repositories_packages_versions_batchdeleteTool(cfg),
+		tools_projects.CreateArtifactregistry_projects_locations_repositories_mavenartifacts_listTool(cfg),
+		tools_projects.CreateArtifactregistry_projects_locations_repositories_pythonpackages_listTool(cfg),
+		tools_projects.CreateArtifactregistry_projects_locations_repositories_aptartifacts_importTool(cfg),
+		tools_projects.CreateArtifactregistry_projects_locations_repositories_dockerimages_listTool(cfg),
+		tools_projects.CreateArtifactregistry_projects_locations_repositories_packages_versions_listTool(cfg),
+		tools_projects.CreateArtifactregistry_projects_locations_repositories_files_listTool(cfg),
+		tools_projects.CreateArtifactregistry_projects_locations_repositories_npmpackages_listTool(cfg),
+		tools_projects.CreateArtifactregistry_projects_locations_listTool(cfg),
+		tools_projects.CreateArtifactregistry_projects_locations_repositories_yumartifacts_importTool(cfg),
+		tools_projects.CreateArtifactregistry_projects_locations_repositories_googetartifacts_importTool(cfg),
+		tools_projects.CreateArtifactregistry_projects_locations_repositories_getiampolicyTool(cfg),
+		tools_projects.CreateArtifactregistry_projects_locations_repositories_testiampermissionsTool(cfg),
+		tools_projects.CreateArtifactregistry_projects_locations_repositories_setiampolicyTool(cfg),
+		tools_projects.CreateArtifactregistry_projects_locations_repositories_listTool(cfg),
+		tools_projects.CreateArtifactregistry_projects_locations_repositories_createTool(cfg),
+	}
+}
